@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('../../models/coreModels/setting');
+require('../../models/coreModels/Setting');
 
 const Model = mongoose.model('Setting');
 
