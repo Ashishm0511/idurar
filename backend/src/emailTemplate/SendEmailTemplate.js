@@ -1,3 +1,4 @@
+
 exports.SendInvoice = ({ title = 'Invoice from Idurar', name = '', time = new Date() }) => {
   return `
     <div>
