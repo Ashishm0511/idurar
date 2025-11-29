@@ -1,4 +1,4 @@
-const { passwordVerfication } = require('../../../../emailTemplate/emailVerfication');
+const { passwordVerfication } = require('../../../../emailTemplate/emailVerfication.js');
 
 const { Resend } = require('resend');
 

@@ -1,4 +1,4 @@
-const createCRUDController = require('@/controllers/middlewaresControllers/createCRUDController');
+const createCRUDController = require('../controllers/middlewaresControllers/createCRUDController');
 const { routesList } = require('@/models/utils');
 
 const { globSync } = require('glob');
