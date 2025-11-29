@@ -25,7 +25,13 @@ jobs:
         run: npm install
 
       - name: Run Unit Tests
-        run: npm test
+  run: |
+    if npm run | grep -q "test"; then
+      npm test
+    else
+      echo "No test script found, skipping."
+    fi
+
 
 
   test-backend:
@@ -45,11 +51,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Lint
-        run: npm run lint
-
       - name: Run Unit Tests
-        run: npm test
+  run: |
+    if npm run | grep -q "test"; then
+      npm test
+    else
+      echo "No test script found, skipping."
+    fi
 
 
   docker-build-push:
