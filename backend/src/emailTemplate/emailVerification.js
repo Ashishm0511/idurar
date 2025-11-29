@@ -1,4 +1,4 @@
-exports.passwordVerfication = ({
+exports.passwordVerification = ({
   title = 'Reset your Password',
   name = '',
   link = '',

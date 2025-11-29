@@ -1,4 +1,4 @@
-const { passwordVerfication } = require('../../../../emailTemplate/emailVerfication.js');
+const { passwordVerification } = require('../../../../emailTemplate/emailVerification.js');
 
 const { Resend } = require('resend');
 
@@ -8,7 +8,7 @@ const sendMail = async ({
   link,
   idurar_app_email,
   subject = 'Verify your email | idurar',
-  type = 'emailVerfication',
+  type = 'emailVerification',
   emailToken,
 }) => {
   const resend = new Resend(process.env.RESEND_API);
@@ -17,7 +17,7 @@ const sendMail = async ({
     from: idurar_app_email,
     to: email,
     subject,
-    html: passwordVerfication({ name, link }),
+    html: passwordVerification({ name, link }),
   });
 
   return data;
